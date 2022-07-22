@@ -55,7 +55,7 @@
     "feathers-errors": "2.4.0",
     "feathers-mongoose": "3.5.3",
     "feathers-multi-service": "0.0.4",
-    "mongoose": "4.6.5",
+    "mongoose": "^5.13.14",
     "redrun": "^5.9.11"
   },
   "devDependencies": {

@@ -14,7 +14,10 @@ export default function (params) {
 
   if (!services[serviceName]) {
     // setting up a db connection
-    const connection = mongoose.createConnection(connectionUrl);
+    const connection = /* TODO: JSFIX could not patch the breaking change:
+    BREAKING CHANGE: mongoose.connect() returns a promise, removed MongooseThenable #5796
+    Suggested fix: Only relevant if you depend on the return value being a reference to the mongoose object. In that case, you need to modify the usages of the return value to get the mongoose object from somewhere else.*/
+    mongoose.createConnection(connectionUrl);
     // creating a model
     const model = connection.model(this.collectionName, this.schema);
     // creating a service
